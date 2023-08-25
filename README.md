@@ -5,5 +5,15 @@ This documentation contains detailed explanation of design and synthesis of a di
 
 Our goal is to perform pre-synthesis and post-sythesis on the design which in our case is a digital delay timer used for generating programmable delay. It consists of four operating modes : one-shot (OS), Delayed Operate (DO), Delayed Release(DR), Dual Delay (DD). Those four modes will be selected by inputs mode_a and mode_b.
 
+The wb[7:0] are weighting bit inputs which are to program the delays according to given equations in the specification of the delay timer [This depends on the IC, the IC considered for this design is LS7212]. 
+
+Depending upon the operating modes and tbe weighted bits the delay output will be prodouced which is being verified through the testbench. 
+
+# Pre-synthesis
+
+The tool used for execuitng the design file i.e .v file is iverilog and the waveforms can be seen on gtkwave platform.
+Here is the command to generate a.out file and to see the output:
+``` --> iverilog design_timer.v tb_desing_timer.v [this will generate 
+
 
 
