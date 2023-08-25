@@ -13,7 +13,11 @@ Depending upon the operating modes and tbe weighted bits the delay output will b
 
 The tool used for execuitng the design file i.e .v file is iverilog and the waveforms can be seen on gtkwave platform.
 Here is the command to generate a.out file and to see the output:
-``` --> iverilog design_timer.v tb_desing_timer.v [this will generate 
+``` iverilog design_timer.v tb_desing_timer.v    // this will generate a.out file 
+./a.out  //after executinon you will be able to see tb_delay_timer.vcd file
+gtkwave tb_delay_timer.vcd```
+
+
 
 
 
