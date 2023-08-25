@@ -12,7 +12,7 @@ Depending upon the operating modes and tbe weighted bits the delay output will b
 # Pre-synthesis
 
 The tool used for execuitng the design file i.e .v file is iverilog and the waveforms can be seen on gtkwave platform.
-Here is the command to generate a.out file and to see the output:
+Execute the commads given line by line the terminal to generate the waveform :
 ```
 iverilog design_timer.v tb_desing_timer.v    // this will generate a.out file 
 ./a.out                                      // after executinon you will be able to see tb_delay_timer.vcd file
@@ -23,6 +23,36 @@ This step completes the pre-synthesis process.
 Waveform of pre-synthesis:
 
 ![pic_1](https://github.com/rahulrathod10/Synthosphere_design_hackathon/assets/143223452/b4d13bab-62f2-42f2-be7e-950952c98b6d)
+
+#Post-synthesis 
+We are using yosys an open-source tool to perform synthesis. Synthesis is a process to convert your design in the form of gates and flip-flops.
+
+After performing synthesis, we generated "netlist_delay_timer1.v" file .
+
+Here is the netlist and number of gates used to sythesize the design :
+
+![top_pic](https://github.com/rahulrathod10/Synthosphere_design_hackathon/assets/143223452/fb081649-8c59-49ba-81c2-1da3e0e413d7)
+
+Here is the output after mapping the design to all the flip-flops :
+
+![abc_pic](https://github.com/rahulrathod10/Synthosphere_design_hackathon/assets/143223452/05763d90-5b97-4c79-820a-5eac85130690)
+
+The post-synthesis process is carried out on the "netlist_delay_timer.v" file and waveforms of both pre-synthesis and post-synthesis is compared. If both the waeforms are same then synthesis is successful.
+
+Repeat the same that we did for pre-synthesis, but this replace the file with "netlist_delay_timer1.v" and add the necessary files so that the tool knows from the design is derived. 
+
+Execute the commands line by line to get the post-synthesis waveform :
+```
+iverilog netlist_design_delay_timer1.v ../verilog_model/primitives.v ../verilog_model/sky130_fd_sc_hd_edited.v tb_desing_timer.v    // this will generate a.out file 
+./a.out                                      // after executinon you will be able to see tb_delay_timer.vcd file
+gtkwave tb_delay_timer.vcd
+```
+
+Waveform of post-synthesis :
+
+![pic_2](https://github.com/rahulrathod10/Synthosphere_design_hackathon/assets/143223452/d759d98d-8fea-4fd9-b9b6-99138c708043)
+
+On comparing the waveforms of pre-synthesis and post-synthesis we obeserve that both the waveforms are same, which implies that the synthesis was successful.
 
 
 
