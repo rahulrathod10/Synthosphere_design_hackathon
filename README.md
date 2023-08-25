@@ -15,9 +15,14 @@ The tool used for execuitng the design file i.e .v file is iverilog and the wave
 Here is the command to generate a.out file and to see the output:
 ```
 iverilog design_timer.v tb_desing_timer.v    // this will generate a.out file 
-./a.out  //after executinon you will be able to see tb_delay_timer.vcd file
-gtkwave tb_delay_timer.vcd
+./a.out                                      // after executinon you will be able to see tb_delay_timer.vcd file
+gtkwave tb_delay_timer.vcd                   // this command will open your waveform on gtkwave.
 ```
+This step completes the pre-synthesis process.
+
+Waveform of pre-synthesis:
+
+![pic_1](https://github.com/rahulrathod10/Synthosphere_design_hackathon/assets/143223452/b4d13bab-62f2-42f2-be7e-950952c98b6d)
 
 
 
