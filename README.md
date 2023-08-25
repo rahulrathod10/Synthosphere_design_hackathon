@@ -39,6 +39,11 @@ Here is the output after mapping the design to all the flip-flops :
 
 The post-synthesis process is carried out on the "netlist_delay_timer.v" file and waveforms of both pre-synthesis and post-synthesis is compared. If both the waeforms are same then synthesis is successful.
 
+Design obtained after synthesis :
+
+![Screenshot from 2023-08-26 03-43-55](https://github.com/rahulrathod10/Synthosphere_design_hackathon/assets/143223452/1e078593-aa1e-4cea-9956-9bf3efba27ab)
+
+
 Repeat the same that we did for pre-synthesis, but this replace the file with "netlist_delay_timer1.v" and add the necessary files so that the tool knows from the design is derived. 
 
 Execute the commands line by line to get the post-synthesis waveform :
